@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using MySql.Data.MySqlClient;
+using Serpis.Ad;
 
 namespace CArticulo
 {
@@ -22,30 +23,9 @@ namespace CArticulo
                 try
                 {
                     dbConnection.Open();
-                    Console.WriteLine("------------------------------------");
-                    Console.WriteLine("1. Listar\n" +
-                        "2. Consultar\n" +
-                        "3. Añadir\n" +
-                        "0. Salir\n" +
-                        "> Selecciona: ");
-                    Console.WriteLine("------------------------------------");
-                    switch ((string)Console.ReadLine())
-                    {
-                        case "1":
-                            ShowMetaInfo();
-                            break;
-                        case "2":
-                            ShowAll();
-                            break;
-                        case "3":
-                            InsertValue();
-                            break;
-                        case "0":
-                            return;
-                        default:
-                            Console.WriteLine("No se ha encontrado función, vuelve a intentarlo");
-                            break;
-                    }
+                    Menu.Create("Menu de selección")
+                        .Add("1. Listar", ShowAll)
+                        .Show();
                 }
                 catch
                 {
@@ -74,8 +54,10 @@ namespace CArticulo
         protected static void InsertValue()
         {
             IDbCommand dbCommand = dbConnection.CreateCommand();
-            string nombre = "nuevo " + DateTime.Now;
-            dbCommand.CommandText = String.Format("insert into categoria (nombre) values ('[0]')", nombre);
+            Console.Write("Nombre: ");
+            string nombre = Console.ReadLine();
+            dbCommand.CommandText = "insert into categoria (nombre) values (@nombre)";
+            DbCommandHelper.AddParameter(dbCommand, "nombre", nombre);
             dbCommand.ExecuteNonQuery();
         }
 
