@@ -30,10 +30,10 @@ namespace Serpis.Ad
             Console.WriteLine("> Selecciona: ");
             Console.WriteLine("------------------------------------");
 
-            string userInput = Console.ReadLine().Substring(0, 1);
-            if (userInput.Substring(0, 1) == "0")
+            string userInput = Console.ReadLine();
+            userInput = userInput.Substring(0, 1);
+            if (userInput == "0")
                 Environment.Exit(0);
-            Console.WriteLine("DEBUG: " + userInput + " " + Selection[userInput]);
             return Selection[userInput];
         }
     }

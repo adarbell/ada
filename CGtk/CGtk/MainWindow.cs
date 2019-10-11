@@ -16,6 +16,7 @@ public partial class MainWindow : Gtk.Window
         listStore.AppendValues("2", "cat 2");
 
         newAction.Activated += (sender, e) => new CGtk.CategoriaWindow();
+        quitAction.Activated += (sender, e) => Application.Quit();
     }
 
     protected void OnDeleteEvent(object sender, DeleteEventArgs a)

@@ -25,6 +25,8 @@ namespace CArticulo
                     dbConnection.Open();
                     Menu.Create("Menu de selección")
                         .Add("1. Listar", ShowAll)
+                        .Add("2. Consultar", ShowMetaInfo)
+                        .Add("3. Añadir", InsertValue)
                         .Show();
                 }
                 catch

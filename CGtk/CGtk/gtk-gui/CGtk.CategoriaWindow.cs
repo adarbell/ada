@@ -4,7 +4,7 @@ namespace CGtk
 {
 	public partial class CategoriaWindow
 	{
-		private global::Gtk.VBox vbox1;
+		private global::Gtk.VBox vbox3;
 
 		private global::Gtk.Table table1;
 
@@ -12,18 +12,25 @@ namespace CGtk
 
 		private global::Gtk.Label label1;
 
+		private global::Gtk.HButtonBox hbuttonbox2;
+
+		private global::Gtk.Button button33;
+
+		private global::Gtk.Button button34;
+
 		protected virtual void Build()
 		{
 			global::Stetic.Gui.Initialize(this);
 			// Widget CGtk.CategoriaWindow
 			this.Name = "CGtk.CategoriaWindow";
-			this.Title = global::Mono.Unix.Catalog.GetString("CategoriaWindow");
+			this.Title = global::Mono.Unix.Catalog.GetString("Window");
 			this.WindowPosition = ((global::Gtk.WindowPosition)(4));
+			this.AllowShrink = true;
 			// Container child CGtk.CategoriaWindow.Gtk.Container+ContainerChild
-			this.vbox1 = new global::Gtk.VBox();
-			this.vbox1.Name = "vbox1";
-			this.vbox1.Spacing = 6;
-			// Container child vbox1.Gtk.Box+BoxChild
+			this.vbox3 = new global::Gtk.VBox();
+			this.vbox3.Name = "vbox3";
+			this.vbox3.Spacing = 6;
+			// Container child vbox3.Gtk.Box+BoxChild
 			this.table1 = new global::Gtk.Table(((uint)(1)), ((uint)(2)), false);
 			this.table1.Name = "table1";
 			this.table1.RowSpacing = ((uint)(6));
@@ -47,18 +54,48 @@ namespace CGtk
 			global::Gtk.Table.TableChild w2 = ((global::Gtk.Table.TableChild)(this.table1[this.label1]));
 			w2.XOptions = ((global::Gtk.AttachOptions)(4));
 			w2.YOptions = ((global::Gtk.AttachOptions)(4));
-			this.vbox1.Add(this.table1);
-			global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.vbox1[this.table1]));
-			w3.Position = 1;
+			this.vbox3.Add(this.table1);
+			global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.vbox3[this.table1]));
+			w3.Position = 0;
 			w3.Expand = false;
 			w3.Fill = false;
-			this.Add(this.vbox1);
+			// Container child vbox3.Gtk.Box+BoxChild
+			this.hbuttonbox2 = new global::Gtk.HButtonBox();
+			this.hbuttonbox2.Name = "hbuttonbox2";
+			this.hbuttonbox2.Spacing = 5;
+			// Container child hbuttonbox2.Gtk.ButtonBox+ButtonBoxChild
+			this.button33 = new global::Gtk.Button();
+			this.button33.CanFocus = true;
+			this.button33.Name = "button33";
+			this.button33.UseUnderline = true;
+			this.button33.Label = global::Mono.Unix.Catalog.GetString("GtkButton");
+			this.hbuttonbox2.Add(this.button33);
+			global::Gtk.ButtonBox.ButtonBoxChild w4 = ((global::Gtk.ButtonBox.ButtonBoxChild)(this.hbuttonbox2[this.button33]));
+			w4.Expand = false;
+			w4.Fill = false;
+			// Container child hbuttonbox2.Gtk.ButtonBox+ButtonBoxChild
+			this.button34 = new global::Gtk.Button();
+			this.button34.CanFocus = true;
+			this.button34.Name = "button34";
+			this.button34.UseUnderline = true;
+			this.button34.Label = global::Mono.Unix.Catalog.GetString("GtkButton");
+			this.hbuttonbox2.Add(this.button34);
+			global::Gtk.ButtonBox.ButtonBoxChild w5 = ((global::Gtk.ButtonBox.ButtonBoxChild)(this.hbuttonbox2[this.button34]));
+			w5.Position = 1;
+			w5.Expand = false;
+			w5.Fill = false;
+			this.vbox3.Add(this.hbuttonbox2);
+			global::Gtk.Box.BoxChild w6 = ((global::Gtk.Box.BoxChild)(this.vbox3[this.hbuttonbox2]));
+			w6.Position = 1;
+			w6.Expand = false;
+			w6.Fill = false;
+			this.Add(this.vbox3);
 			if ((this.Child != null))
 			{
 				this.Child.ShowAll();
 			}
 			this.DefaultWidth = 400;
-			this.DefaultHeight = 300;
+			this.DefaultHeight = 303;
 			this.Show();
 		}
 	}
