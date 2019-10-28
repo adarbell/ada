@@ -35,7 +35,8 @@ public partial class MainWindow
 		w1.Add(this.editAction, null);
 		this.deleteAction = new global::Gtk.Action("deleteAction", null, null, "gtk-delete");
 		w1.Add(this.deleteAction, null);
-		this.refreshAction = new global::Gtk.Action("refreshAction", null, null, "gtk-refresh");
+		this.refreshAction = new global::Gtk.Action("refreshAction", global::Mono.Unix.Catalog.GetString("_Actualizar"), null, "gtk-refresh");
+		this.refreshAction.ShortLabel = global::Mono.Unix.Catalog.GetString("_Actualizar");
 		w1.Add(this.refreshAction, null);
 		this.quitAction = new global::Gtk.Action("quitAction", null, null, "gtk-quit");
 		w1.Add(this.quitAction, null);
