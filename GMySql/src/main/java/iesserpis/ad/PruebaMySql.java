@@ -21,7 +21,7 @@ public class PruebaMySql {
 	private static void ShowAll() throws SQLException {
 		Statement statement = connection.createStatement();
 		ResultSet resultSet = statement.executeQuery("select * from categoria order by id");
-		
+
 		while (resultSet.next()) {
 			System.out.printf("id=%s, nombre=%s%n", resultSet.getLong(1), resultSet.getString(2));
 		}
