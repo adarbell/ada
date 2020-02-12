@@ -1,4 +1,4 @@
-package iesserpis.ad;
+package GMySql;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
